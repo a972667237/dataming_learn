@@ -1,0 +1,13 @@
+def loadImages(dirName):
+    from os import listdir
+    hwLabels = []
+    trainningFileList = listdir(dirname)
+    m = len(trainningFileList)
+    trainningMat = zeros((m,1024))
+    for i in range(m):
+     fileNameStr = trainningFileList[i]
+     fileStr = fileNameStr.split('.')[0]
+     classNumStr = int(fileStr.split('_')[0])
+     if classNumStr == 9: hwLabels.append(-1)
+     else: hwLabels.append(1)
+     trainningMat[]
